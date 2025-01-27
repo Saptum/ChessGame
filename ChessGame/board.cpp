@@ -29,14 +29,15 @@ Board::Board()
 
 void Board::Display() const
 {
-    const char blackSquare = 219;// Символ для черной клетки
+    const char blackSquare = ' # ';// Символ для черной клетки
     const char whiteSquare = ' '; // Символ для белой клетки
 
 
     std::cout << " a b c d e f g h\n";// Метки столбцов
+    std::cout << "+-----------------+\n"; // Верхняя рамка
     for (int row=0;row<8;++row)
     {
-        std::cout << 8 - row << ' ';// Метки строк
+        std::cout << 8 - row << " | ";// Метки строк и левая рамка
         for (int col =0;col <8 ;++col)
         { 
             // Определение цвета клетки
@@ -51,10 +52,11 @@ void Board::Display() const
                 // Иначе отображаем цвет клетки
                 std::cout << (isBlack ? blackSquare : whiteSquare) << ' ';
             }
-            std::cout << squares[row][col] << ' ';
+            //std::cout << squares[row][col] << ' ';
         }
-        std::cout << 8 - row << '\n';
+        std::cout<< " | " << 8 - row << '\n';// Правая рамка и метка строки
     }
+    std::cout << " +-----------------+\n"; // Нижняя рамка
     std::cout << " a b c d e f g h\n";// Метки столбцов
 }
 
