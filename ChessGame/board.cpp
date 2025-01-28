@@ -1,13 +1,15 @@
 ﻿#include "board.h"
+#include "piece.h"
 
 Board::Board()
 {
 	// Инициализация доски: создание 8 строк по 8 столбцов
-	squares = std::vector<std::vector<char>>(8, std::vector<char>(8, ' '));
+    squares.resize(8, std::vector<std::unique_ptr<Piece>>(8, nullptr));
 
 
 	// Расстановка фигур на доске
-	const std::string initialSetup[8] = {
+	/*
+	 const std::string initialSetup[8] = {
         "rnbqkbnr",
         "pppppppp",
         "        ",
@@ -25,6 +27,13 @@ Board::Board()
             squares[row][col] = initialSetup[row][col];
 	    }
     }
+	*/
+    // Инициализация фигур на доске
+    for (int i = 0; i < 8; ++i) {
+        //squares[1][i] = std::make_unique<Pawn>(Color::White);
+        //squares[6][i] = std::make_unique<Pawn>(Color::Black);
+    }
+
 }
 
 void Board::Display() const

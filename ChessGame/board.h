@@ -15,7 +15,7 @@ public:
 	bool MovePiece(int startX, int startY, int endX, int endY);
 
 private:
-	std::vector<std::vector<char>> squares;// Двумерный вектор для хранения состояния доски
+	std::vector<std::vector<std::unique_ptr<Piece>>> squares;// Двумерный вектор для хранения состояния доски
 
 };
 #endif

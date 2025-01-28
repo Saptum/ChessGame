@@ -21,7 +21,7 @@
     <ClCompile Include="board.cpp">
       <Filter>Header Files</Filter>
     </ClCompile>
-    <ClCompile Include="pawn.cpp">
+    <ClCompile Include="Pawn.cpp">
       <Filter>Header Files</Filter>
     </ClCompile>
     <ClCompile Include="rook.cpp">
