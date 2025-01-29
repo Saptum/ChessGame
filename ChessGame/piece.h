@@ -1,5 +1,7 @@
 #pragma once
-
+#pragma once
+#ifndef PIECE_H
+#define PIECE_H
 
 #include <iostream>
 #include <vector>
@@ -20,3 +22,5 @@ public:
 protected:
 	Color color;
 };
+
+#endif

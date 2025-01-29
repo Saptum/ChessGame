@@ -1,5 +1,6 @@
 ﻿#include "board.h"
 #include "piece.h"
+#include "Pawn.cpp"
 
 Board::Board()
 {
@@ -30,9 +31,10 @@ Board::Board()
 	*/
     // Инициализация фигур на доске
     for (int i = 0; i < 8; ++i) {
-        //squares[1][i] = std::make_unique<Pawn>(Color::White);
-        //squares[6][i] = std::make_unique<Pawn>(Color::Black);
+        squares[1][i] = std::make_unique<Pawn>(Color::White);
+    	squares[6][i] = std::make_unique<Pawn>(Color::Black);
     }
+    // Добавьте инициализацию остальных фигур
 
 }
 
