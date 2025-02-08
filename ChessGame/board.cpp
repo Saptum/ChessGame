@@ -1,6 +1,6 @@
 ﻿#include "board.h"
 #include "piece.h"
-#include "Pawn.cpp"
+
 
 Board::Board()
 {
@@ -82,10 +82,19 @@ bool Board::MovePiece(int startX, int startY, int endX, int endY)
         return false; // Нет фигуры в начальной позиции
     }
 
+    auto& target = squares[endY][endX];
+
 	if (piece->IsValidMove(startX,startY,endX,endY))
 	{
-        squares[endY][endX] = std::move(piece);
-        squares[startY][startX] = nullptr;
+        if (target && target->GetColor() == piece->GetColor()) 
+        {
+            return false; // Нельзя бить свои фигуры
+        }
+        //squares[endY][endX] = std::move(piece);
+        //squares[startY][startX] = nullptr;
+        //return true;
+        target = std::move(piece); // Перемещение фигуры
+        squares[startY][startX] = nullptr; // Очистка старой клетки
         return true;
 	}
 

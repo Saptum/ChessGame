@@ -7,7 +7,7 @@ int main()
 {
     Board chessBoard;// Создание объекта шахматной доски
     std::string move;
-    while (true)
+    /*while (true)
     {
 	    chessBoard.Display();// Отображение доски
         std::cout << "Введите ход (например, e2e4) или 'exit' для выхода: ";
@@ -31,7 +31,7 @@ int main()
             std::cout << "Неверный формат ввода. Попробуйте снова.\n";
 	    }
     }
-    
+    */
     return 0;
 }
 
