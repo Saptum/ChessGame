@@ -27,6 +27,18 @@
     <ClCompile Include="rook.cpp">
       <Filter>Header Files</Filter>
     </ClCompile>
+    <ClCompile Include="knight.cpp">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bishop.cpp">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="queen.cpp">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="king.cpp">
+      <Filter>Header Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="board.h">
@@ -39,6 +51,18 @@
       <Filter>Resource Files</Filter>
     </ClInclude>
     <ClInclude Include="rook.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="knight.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bishop.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="queen.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="king.h">
       <Filter>Resource Files</Filter>
     </ClInclude>
   </ItemGroup>
