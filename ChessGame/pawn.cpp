@@ -1,26 +1,8 @@
-﻿#include "piece.h"
+﻿#include "pawn.h"
 
-class Pawn : public Piece
+bool Pawn::IsValidMove(int startX, int startY, int endX, int endY) const
 {
-public:
-	Pawn(Color color) : Piece(color) {}
-
-	char GetSymbol() const override
-	{
-		return (color == Color::White) ? 'P' : 'p';
-	}
-
-	bool IsValidMove(int startX, int startY, int endX, int endY) const override
-	{
-		// Реализация проверки корректности хода для пешки
-		int direction = (color == Color::White) ? 1 : -1;
-		if (startX == endX && startY == endY + direction)
-		{
-			return true; // Обычный ход вперед
-		}
-		// Добавьте дополнительные проверки для взятия, первого хода и т.д.
-		return false;
-
-	}
-};
+    int direction = (color == Color::White) ? 1 : -1;
+    return (startX == endX && endY == startY + direction);
+}
  

@@ -1,18 +1,8 @@
-﻿#include "piece.h"
+﻿#include "rook.h"
 
-class Rook : public Piece
-{
-public:
-	Rook(Color color) : Piece(color) {}
-
-	char GetSymbol() const override
-	{
-		return (color == Color::White) ? 'R' : 'r';
-	}
-
-	bool IsValidMove(int startX, int startY, int endX, int endY) const override
+	bool Rook::IsValidMove(int startX, int startY, int endX, int endY) const
 	{
 		// Ладья ходит по горизонтали или вертикали
 		return (startX == endX || startY == endY);
 	}
-};
+ 

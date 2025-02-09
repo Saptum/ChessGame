@@ -135,6 +135,8 @@
   <ItemGroup>
     <ClInclude Include="board.h" />
     <ClInclude Include="piece.h" />
+    <ClInclude Include="pawn.h" />
+    <ClInclude Include="rook.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

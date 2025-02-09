@@ -35,5 +35,11 @@
     <ClInclude Include="piece.h">
       <Filter>Resource Files</Filter>
     </ClInclude>
+    <ClInclude Include="pawn.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rook.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
