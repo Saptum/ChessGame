@@ -10,7 +10,7 @@ int main()
     while (true)
     {
         chessBoard.Display(); // Отображение доски
-        std::cout << "Введите ход (например, e2e4) или 'exit' для выхода: ";
+        std::cout << "Enter a move (e.g. e2e4) or 'exit' to exit: ";
         std::cin >> move;
 
         if (move == "exit")
@@ -28,12 +28,12 @@ int main()
 
             if (!chessBoard.MovePiece(startX, startY, endX, endY))
             {
-                std::cout << "Недопустимый ход. Попробуйте снова.\n";
+                std::cout << "Illegal move. Try again.\n";
             }
         }
         else
         {
-            std::cout << "Неверный формат ввода. Попробуйте снова.\n";
+            std::cout << "Invalid input format. Try again.\n";
         }
     }
 

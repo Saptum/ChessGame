@@ -7,7 +7,7 @@
 #include "queen.h"
 #include "king.h"
 #include <iostream>
-#include <utility> // для std::move
+#include <utility> 
 
 Board::Board()
 {
@@ -99,5 +99,5 @@ bool Board::MovePiece(int startX, int startY, int endX, int endY)
         return true;
     }
 
-    return false; // Недопустимый ход
+    //return false; // Недопустимый ход
 }
